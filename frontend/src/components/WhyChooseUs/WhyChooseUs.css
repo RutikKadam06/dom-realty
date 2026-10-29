@@ -1,0 +1,72 @@
+.why-section{
+  padding:100px 0;
+  background:#fff;
+}
+
+.why-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:25px;
+}
+
+.why-card{
+  background:#fff;
+  border-radius:22px;
+  padding:35px 28px;
+  text-align:center;
+  border:1px solid #ECF0F3;
+  transition:.35s;
+  box-shadow:0 10px 25px rgba(0,0,0,.05);
+}
+
+.why-card:hover{
+  transform:translateY(-8px);
+  background:#065F46;
+}
+
+.why-icon{
+  width:72px;
+  height:72px;
+  border-radius:50%;
+  background:#FFF7D6;
+  color:#D4AF37;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  margin:auto;
+  font-size:30px;
+  margin-bottom:20px;
+}
+
+.why-card h3{
+  color:#065F46;
+  font-size:22px;
+  margin-bottom:14px;
+}
+
+.why-card p{
+  color:#64748B;
+  line-height:1.8;
+}
+
+.why-card:hover h3,
+.why-card:hover p{
+  color:white;
+}
+
+.why-card:hover .why-icon{
+  background:#D4AF37;
+  color:#065F46;
+}
+
+@media(max-width:992px){
+  .why-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+}
+
+@media(max-width:768px){
+  .why-grid{
+    grid-template-columns:1fr;
+  }
+}

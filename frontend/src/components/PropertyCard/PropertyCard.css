@@ -1,0 +1,273 @@
+
+.property-card {
+  background: #fff;
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+  transition: transform 0.35s, box-shadow 0.35s;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.property-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.14);
+}
+
+/* Property visual */
+.property-image {
+  position: relative;
+  height: 250px;
+  overflow: hidden;
+  background: #064e3b;
+}
+
+.property-image > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s;
+}
+
+.property-card:hover .property-image > img {
+  transform: scale(1.05);
+}
+
+/* Shown when no image is supplied */
+.property-placeholder {
+  display: none;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 25px;
+  color: #fff;
+  background:
+    radial-gradient(
+      circle at 80% 15%,
+      rgba(212, 175, 55, 0.19),
+      transparent 38%
+    ),
+    linear-gradient(145deg, #032f26, #065f46 60%, #0b3d32);
+}
+
+.property-image.no-property-image .property-placeholder,
+.property-image:has(> img[style*="display: none"]) .property-placeholder {
+  display: flex;
+}
+
+.property-image.no-property-image > img {
+  display: none;
+}
+
+.placeholder-icon {
+  width: 65px;
+  height: 65px;
+  border: 1px solid rgba(212, 175, 55, 0.7);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #d4af37;
+  font-size: 29px;
+  margin-bottom: 15px;
+}
+
+.placeholder-brand {
+  color: #d4af37;
+  font-size: 11px;
+  letter-spacing: 3px;
+  font-weight: 700;
+}
+
+.property-placeholder h3 {
+  color: #fff;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 25px;
+  margin: 9px 0;
+}
+
+.property-placeholder p {
+  color: #d1e4db;
+  font-size: 12px;
+  margin: 0;
+}
+
+/* Tags */
+.verified-tag {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  z-index: 2;
+  background: #fff;
+  color: #065f46;
+  padding: 8px 12px;
+  border-radius: 30px;
+  font-size: 11px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.price-tag {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  z-index: 2;
+  background: #d4af37;
+  color: #064e3b;
+  padding: 10px 15px;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 14px;
+  max-width: calc(100% - 32px);
+}
+
+/* Property information */
+.property-content {
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.property-category {
+  color: #a78316;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.property-content h3 {
+  color: #065f46;
+  font-size: 25px;
+  line-height: 1.2;
+  margin: 10px 0;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  overflow-wrap: anywhere;
+}
+
+.property-location {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  color: #64748b;
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0 0 14px;
+}
+
+.property-location svg {
+  color: #b08d26;
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.property-description {
+  color: #64748b;
+  font-size: 13px;
+  line-height: 1.7;
+  margin: 0 0 15px;
+}
+
+/* Area and availability */
+.property-details {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 16px 0;
+  border-top: 1px solid #e5e7eb;
+  border-bottom: 1px solid #e5e7eb;
+  margin-top: auto;
+}
+
+.property-details > div {
+  min-width: 0;
+}
+
+.property-details span {
+  color: #94a3b8;
+  font-size: 11px;
+}
+
+.property-details h4 {
+  color: #065f46;
+  font-size: 14px;
+  margin: 6px 0 0;
+  overflow-wrap: anywhere;
+}
+
+/* Action buttons */
+.property-buttons {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.details-btn {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: #065f46;
+  color: #fff;
+  padding: 13px 10px;
+  border-radius: 12px;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.details-btn:hover {
+  background: #047857;
+}
+
+.whatsapp-card-btn {
+  width: 48px;
+  min-width: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #16a34a;
+  color: #fff;
+  border-radius: 12px;
+  font-size: 21px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.whatsapp-card-btn:hover {
+  background: #12813b;
+}
+
+@media (max-width: 768px) {
+  .property-image {
+    height: 220px;
+  }
+
+  .property-content {
+    padding: 18px;
+  }
+
+  .property-content h3 {
+    font-size: 23px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .property-card,
+  .property-image > img,
+  .details-btn,
+  .whatsapp-card-btn {
+    transition: none;
+  }
+}

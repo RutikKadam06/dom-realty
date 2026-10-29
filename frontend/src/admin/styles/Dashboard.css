@@ -1,0 +1,143 @@
+.dashboard-page {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 25px;
+}
+
+.second-grid {
+  grid-template-columns: 1.5fr 1fr;
+}
+
+.third-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.dashboard-card {
+  background: white;
+  padding: 24px;
+  border-radius: 24px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.06);
+}
+
+.card-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #065f46;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.card-title svg {
+  color: #d4af37;
+}
+
+.enquiry-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.enquiry-table th,
+.enquiry-table td {
+  padding: 15px 10px;
+  text-align: left;
+  border-bottom: 1px solid #edf2f7;
+}
+
+.enquiry-table th {
+  color: #64748b;
+  font-size: 14px;
+}
+
+.status {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.status.new {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.status.contacted {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+.status.site-visit {
+  background: #fef3c7;
+  color: #b45309;
+}
+
+.property-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.property-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  border-radius: 18px;
+  background: #f8fafc;
+}
+
+.property-item h4 {
+  color: #065f46;
+  margin-bottom: 5px;
+}
+
+.property-item p {
+  color: #64748b;
+  font-size: 14px;
+}
+
+.property-item span {
+  color: #d4af37;
+  font-weight: 700;
+}
+
+.quick-card {
+  text-align: center;
+}
+
+.quick-icon {
+  font-size: 34px;
+  color: #d4af37;
+  margin-bottom: 15px;
+}
+
+.quick-card h3 {
+  color: #065f46;
+  margin-bottom: 12px;
+}
+
+.quick-card h2 {
+  color: #047857;
+  font-size: 38px;
+  margin-bottom: 10px;
+}
+
+.quick-card p {
+  color: #64748b;
+  line-height: 1.7;
+}
+
+@media (max-width: 992px) {
+  .dashboard-grid,
+  .second-grid,
+  .third-grid {
+    grid-template-columns: 1fr;
+  }
+}

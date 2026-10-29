@@ -1,0 +1,154 @@
+.properties-banner{
+  height:55vh;
+  background:url("../assets/images/property-banner.jpg") center/cover no-repeat;
+  position:relative;
+  display:flex;
+  align-items:center;
+}
+
+.banner-overlay{
+  position:absolute;
+  inset:0;
+  background:linear-gradient(
+      rgba(4,44,34,.78),
+      rgba(4,44,34,.65)
+  );
+}
+
+.banner-content{
+  position:relative;
+  color:white;
+  z-index:2;
+}
+
+.banner-content span{
+  color:#FFD700;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  font-size:13px;
+  font-weight:600;
+}
+
+.banner-content h1{
+  font-size:60px;
+  margin:18px 0;
+  font-family:"Cormorant Garamond",serif;
+}
+
+.banner-content p{
+  max-width:650px;
+  color:#E5E7EB;
+  line-height:1.8;
+}
+
+/* Filter */
+
+.filter-section{
+  margin-top:-45px;
+  position:relative;
+  z-index:5;
+}
+
+.filter-box{
+  background:white;
+  border-radius:20px;
+  padding:22px;
+  display:grid;
+  grid-template-columns:2fr 1fr 1fr;
+  gap:20px;
+  box-shadow:0 15px 35px rgba(0,0,0,.08);
+}
+
+.search-input,
+.filter-select{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  padding:15px 18px;
+  border-radius:14px;
+  border:1px solid #E5E7EB;
+}
+
+.search-input svg,
+.filter-select svg{
+  color:#16A34A;
+}
+
+.search-input input,
+.filter-select select{
+  border:none;
+  outline:none;
+  width:100%;
+  font-size:15px;
+  background:none;
+}
+
+/* Grid */
+
+.properties-page{
+  padding:80px 0;
+  background:#F8FAFC;
+}
+
+.property-heading{
+  margin-bottom:30px;
+}
+
+.property-heading h2{
+  color:#065F46;
+  font-size:34px;
+  font-family:"Cormorant Garamond",serif;
+}
+
+.property-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:30px;
+}
+
+.empty-properties{
+  width:100%;
+  padding:80px;
+  text-align:center;
+  background:white;
+  border-radius:20px;
+}
+
+.empty-properties h3{
+  color:#065F46;
+  margin-bottom:10px;
+}
+
+/* Responsive */
+
+@media(max-width:992px){
+
+  .filter-box{
+    grid-template-columns:1fr;
+  }
+
+  .property-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .banner-content h1{
+    font-size:44px;
+  }
+
+}
+
+@media(max-width:768px){
+
+  .property-grid{
+    grid-template-columns:1fr;
+  }
+
+  .properties-banner{
+    height:45vh;
+  }
+
+  .banner-content h1{
+    font-size:36px;
+  }
+
+}

@@ -1,0 +1,142 @@
+.category-section{
+    padding:90px 0;
+    background:#ffffff;
+  }
+  
+  .section-heading{
+    text-align:center;
+    margin-bottom:50px;
+  }
+  
+  .section-heading span{
+    color:#D4AF37;
+    font-size:14px;
+    font-weight:600;
+    letter-spacing:2px;
+    text-transform:uppercase;
+  }
+  
+  .section-heading h2{
+    color:#065F46;
+    font-size:42px;
+    margin:12px 0;
+    font-family:"Cormorant Garamond", serif;
+  }
+  
+  .section-heading p{
+    max-width:720px;
+    margin:auto;
+    color:#64748B;
+    line-height:1.8;
+  }
+  
+  .category-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:28px;
+  }
+  
+  .category-card{
+    position:relative;
+    border-radius:24px;
+    overflow:hidden;
+    height:520px;
+    cursor:pointer;
+    box-shadow:0 15px 35px rgba(0,0,0,.12);
+  }
+  
+  .category-card img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:transform .6s ease;
+  }
+  
+  .category-card:hover img{
+    transform:scale(1.1);
+  }
+  
+  .category-overlay{
+    position:absolute;
+    inset:0;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-end;
+    padding:28px;
+    background:linear-gradient(
+        180deg,
+        rgba(0,0,0,0) 10%,
+        rgba(0,0,0,.35) 35%,
+        rgba(4,44,34,.92) 100%
+    );
+  }
+  
+  .category-badge{
+    display:inline-block;
+    width:max-content;
+    background:#D4AF37;
+    color:#065F46;
+    padding:8px 16px;
+    border-radius:30px;
+    font-size:12px;
+    font-weight:700;
+    margin-bottom:18px;
+  }
+  
+  .category-overlay h3{
+    color:#fff;
+    font-size:34px;
+    margin-bottom:14px;
+    font-family:"Cormorant Garamond", serif;
+  }
+  
+  .category-overlay p{
+    color:#F3F4F6;
+    line-height:1.7;
+    margin-bottom:24px;
+  }
+  
+  .category-btn{
+    width:max-content;
+    padding:13px 22px;
+    border-radius:30px;
+    background:#fff;
+    color:#065F46;
+    font-weight:600;
+    transition:.3s;
+  }
+  
+  .category-btn:hover{
+    background:#D4AF37;
+    color:#065F46;
+  }
+  
+  /* ---------- Responsive ---------- */
+  
+  @media(max-width:992px){
+  
+    .category-grid{
+      grid-template-columns:repeat(2,1fr);
+    }
+  
+  }
+  
+  @media(max-width:768px){
+  
+    .category-section{
+      padding:70px 0;
+    }
+  
+    .section-heading h2{
+      font-size:34px;
+    }
+  
+    .category-grid{
+      grid-template-columns:1fr;
+    }
+  
+    .category-card{
+      height:420px;
+    }
+  
+  }

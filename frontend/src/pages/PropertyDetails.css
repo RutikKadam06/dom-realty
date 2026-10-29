@@ -1,0 +1,144 @@
+.property-details{
+    padding:70px 0;
+    background:#fff;
+  }
+  
+  .details-container{
+    max-width:1280px;
+    width:90%;
+    margin:auto;
+  }
+  
+  .gallery-grid{
+    display:grid;
+    grid-template-columns:2fr 1fr;
+    gap:20px;
+    margin-bottom:35px;
+  }
+  
+  .main-image img{
+    width:100%;
+    height:520px;
+    border-radius:20px;
+    object-fit:cover;
+  }
+  
+  .side-images{
+    display:grid;
+    gap:15px;
+  }
+  
+  .side-images img{
+    height:160px;
+    border-radius:15px;
+    object-fit:cover;
+  }
+  
+  .details-info{
+    display:grid;
+    grid-template-columns:2fr 1fr;
+    gap:30px;
+  }
+  
+  .info-card{
+    background:#f8faf8;
+    padding:25px;
+    border-radius:18px;
+  }
+  
+  .info-card h1{
+    color:#065f46;
+    margin-bottom:12px;
+  }
+  
+  .price{
+    color:#d4af37;
+    font-size:32px;
+    font-weight:700;
+    margin:15px 0;
+  }
+  
+  .location{
+    color:#64748b;
+    margin-bottom:20px;
+  }
+  
+  .features{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+    margin:25px 0;
+  }
+  
+  .feature{
+    background:#fff;
+    padding:14px;
+    border-radius:10px;
+    text-align:center;
+  }
+  
+  .contact-card{
+    background:#065f46;
+    color:#fff;
+    padding:25px;
+    border-radius:18px;
+    position:sticky;
+    top:100px;
+  }
+  
+  .contact-card button{
+    width:100%;
+    padding:14px;
+    margin-top:15px;
+    border-radius:10px;
+    background:#d4af37;
+    color:#065f46;
+    font-weight:700;
+  }
+  
+  @media(max-width:992px){
+    .gallery-grid,
+    .details-info{
+      grid-template-columns:1fr;
+    }
+  
+    .main-image img{
+      height:400px;
+    }
+  
+    .side-images{
+      grid-template-columns:repeat(3,1fr);
+    }
+  
+    .side-images img{
+      height:120px;
+    }
+  }
+  
+  @media(max-width:768px){
+    .main-image img{
+      height:280px;
+    }
+  
+    .side-images{
+      grid-template-columns:repeat(2,1fr);
+    }
+  
+    .features{
+      grid-template-columns:1fr;
+    }
+  
+    .price{
+      font-size:26px;
+    }
+  }
+  
+  @media(max-width:480px){
+    .side-images{
+      grid-template-columns:1fr;
+    }
+  
+    .side-images img{
+      height:160px;
+    }
+  }

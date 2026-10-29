@@ -1,0 +1,194 @@
+/* ==========================
+   DOM REALTY LOGIN PAGE
+========================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .login-page {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 100vh;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  /* LEFT SIDE */
+  
+  .login-left {
+    background: url("/images/contact-banner.jpg") center/cover no-repeat;
+    position: relative;
+  }
+  
+  .login-left .overlay {
+    background: rgba(4, 27, 45, 0.78);
+    width: 100%;
+    height: 100%;
+    color: white;
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 60px;
+  }
+  
+  .tag {
+    color: #eab54f;
+    letter-spacing: 3px;
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+  
+  .login-left h1 {
+    font-size: 58px;
+    color: #10b981;
+    margin-bottom: 10px;
+  }
+  
+  .login-left h3 {
+    color: #eab54f;
+    margin-bottom: 25px;
+    font-weight: 500;
+  }
+  
+  .subtitle {
+    max-width: 450px;
+    line-height: 1.8;
+    color: #e5e7eb;
+  }
+  
+  /* RIGHT SIDE */
+  
+  .login-right {
+    background: #f8f8f5;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+  }
+  
+  .login-card {
+    width: 100%;
+    max-width: 430px;
+    background: white;
+    padding: 40px;
+    border-radius: 24px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+  }
+  
+  .login-card h2 {
+    color: #005c4d;
+    font-size: 34px;
+    margin-bottom: 8px;
+  }
+  
+  .login-card p {
+    color: #666;
+    margin-bottom: 30px;
+  }
+  
+  /* INPUT */
+  
+  .input-box {
+    position: relative;
+    margin-bottom: 20px;
+  }
+  
+  .input-box input {
+    width: 100%;
+    padding: 14px 45px;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+    outline: none;
+    font-size: 15px;
+    transition: 0.3s;
+  }
+  
+  .input-box input:focus {
+    border-color: #10b981;
+    box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.15);
+  }
+  
+  .icon {
+    position: absolute;
+    left: 15px;
+    top: 16px;
+    color: #10b981;
+  }
+  
+  .eye-icon {
+    position: absolute;
+    right: 15px;
+    top: 16px;
+    cursor: pointer;
+    color: #888;
+  }
+  
+  /* BUTTON */
+  
+  .login-btn {
+    width: 100%;
+    background: linear-gradient(135deg, #10b981, #047857);
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: 0.3s;
+  }
+  
+  .login-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(16, 185, 129, 0.3);
+  }
+  
+  /* FOOTER */
+  
+  .login-footer {
+    margin-top: 30px;
+    text-align: center;
+  }
+  
+  .login-footer p {
+    color: #005c4d;
+    font-weight: 600;
+    margin-bottom: 5px;
+  }
+  
+  .login-footer span {
+    font-size: 13px;
+    color: #888;
+  }
+  
+  /* RESPONSIVE */
+  
+  @media (max-width: 900px) {
+    .login-page {
+      grid-template-columns: 1fr;
+    }
+  
+    .login-left {
+      height: 280px;
+    }
+  
+    .login-left .overlay {
+      padding: 30px;
+    }
+  
+    .login-left h1 {
+      font-size: 42px;
+    }
+  
+    .login-right {
+      padding: 25px;
+    }
+  
+    .login-card {
+      padding: 30px;
+    }
+  }

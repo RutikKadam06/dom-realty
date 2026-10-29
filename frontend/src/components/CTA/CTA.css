@@ -1,0 +1,131 @@
+
+.cta-section {
+  position: relative;
+  padding: 80px 5%;
+  background: #f7f8f3;
+  color: #173c30;
+}
+
+.cta-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 55px 60px;
+  border-radius: 24px;
+  background: linear-gradient(135deg, #103d30, #205b45);
+  box-shadow: 0 18px 45px rgba(12, 45, 34, 0.12);
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.cta-content {
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.cta-eyebrow {
+  margin: 0 0 16px;
+  color: #e7c64b;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.cta-content h2 {
+  margin: 0 0 18px;
+  color: #fff;
+  font-size: clamp(28px, 4vw, 44px);
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+.cta-description {
+  max-width: 720px;
+  margin: 0 auto 30px;
+  color: #e3eee8;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.cta-whatsapp-btn,
+.cta-call-btn,
+.cta-contact-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 48px;
+  padding: 13px 24px;
+  border: 1px solid transparent;
+  border-radius: 50px;
+  box-sizing: border-box;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+.cta-whatsapp-btn {
+  background: #f0c928;
+  color: #153c30;
+}
+
+.cta-whatsapp-btn:hover {
+  background: #ffda3d;
+  transform: translateY(-2px);
+}
+
+.cta-call-btn,
+.cta-contact-btn {
+  border-color: rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+}
+
+.cta-call-btn:hover,
+.cta-contact-btn:hover {
+  border-color: #e7c64b;
+  background: rgba(255, 255, 255, 0.16);
+}
+
+.cta-whatsapp-btn svg,
+.cta-call-btn svg,
+.cta-contact-btn svg {
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .cta-section {
+    padding: 50px 18px;
+  }
+
+  .cta-container {
+    padding: 38px 22px;
+    border-radius: 18px;
+  }
+
+  .cta-description {
+    font-size: 15px;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .cta-whatsapp-btn,
+  .cta-call-btn,
+  .cta-contact-btn {
+    width: 100%;
+  }
+}

@@ -1,0 +1,806 @@
+
+/* ==========================================
+   ABOUT DOM REALTY
+========================================== */
+
+.about-hero {
+  min-height: 90vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.about-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(6, 35, 28, 0.92),
+    rgba(6, 35, 28, 0.72),
+    rgba(0, 0, 0, 0.3)
+  );
+}
+
+.about-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 720px;
+  color: white;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.about-hero-content > span {
+  color: #d4af37;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.about-hero-content h1 {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(42px, 5vw, 72px);
+  line-height: 1.05;
+  margin: 20px 0;
+}
+
+.about-hero-content p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #e5e7eb;
+  margin-bottom: 35px;
+}
+
+.about-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 16px 34px;
+  border: none;
+  border-radius: 40px;
+  background: #d4af37;
+  color: #065f46;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.about-btn:hover {
+  background: white;
+  transform: translateY(-3px);
+}
+
+/* COMMON SECTION STYLING */
+
+.section-tag {
+  color: #b08d26;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-heading > span {
+  color: #b08d26;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.section-heading h2 {
+  color: #065f46;
+  font-size: 46px;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  margin: 16px 0;
+}
+
+.section-heading p {
+  max-width: 650px;
+  margin: auto;
+  color: #64748b;
+  line-height: 1.8;
+}
+
+/* OUR STORY */
+
+.about-story {
+  padding: 100px 0;
+  background: #fff;
+}
+
+.story-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 60px;
+  align-items: center;
+}
+
+.story-image img {
+  display: block;
+  width: 100%;
+  border-radius: 30px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+}
+
+.story-content h2 {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 48px;
+  line-height: 1.15;
+  color: #065f46;
+  margin: 20px 0;
+}
+
+.story-content p {
+  color: #64748b;
+  line-height: 1.9;
+  margin-bottom: 18px;
+}
+
+.story-stats {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  margin-top: 35px;
+}
+
+.story-stats > div {
+  background: #f8fafc;
+  padding: 22px;
+  border-radius: 18px;
+  text-align: center;
+  border: 1px solid #edf2f7;
+}
+
+.story-stats h3 {
+  color: #065f46;
+  font-size: 25px;
+  margin-bottom: 8px;
+}
+
+.story-stats span {
+  color: #64748b;
+  font-size: 13px;
+}
+
+/* MISSION AND VISION */
+
+.mission-section {
+  padding: 90px 0;
+  background: #f8fafc;
+}
+
+.mission-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 30px;
+}
+
+.mission-card {
+  background: white;
+  padding: 40px 35px;
+  border-radius: 25px;
+  transition: 0.3s ease;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+}
+
+.mission-card:hover {
+  transform: translateY(-6px);
+}
+
+.mission-icon {
+  font-size: 40px;
+  color: #d4af37;
+  margin-bottom: 20px;
+}
+
+.mission-card h3 {
+  color: #065f46;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.mission-card p {
+  color: #64748b;
+  line-height: 1.8;
+}
+
+/* CORE VALUES */
+
+.values-section {
+  padding: 100px 0;
+  background: white;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.value-card {
+  background: #f8fafc;
+  padding: 32px 22px;
+  border-radius: 22px;
+  text-align: center;
+  transition: 0.3s ease;
+}
+
+.value-card:hover {
+  background: #065f46;
+  transform: translateY(-7px);
+}
+
+.value-icon {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  background: #fff7d6;
+  color: #b08d26;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 26px;
+}
+
+.value-card h3 {
+  color: #065f46;
+  margin-bottom: 12px;
+  font-size: 19px;
+}
+
+.value-card p {
+  color: #64748b;
+  line-height: 1.8;
+  font-size: 14px;
+}
+
+.value-card:hover h3,
+.value-card:hover p {
+  color: white;
+}
+
+.value-card:hover .value-icon {
+  background: #d4af37;
+  color: #065f46;
+}
+
+/* COMPANY JOURNEY */
+
+.journey-section {
+  padding: 100px 0;
+  background: #f8fafc;
+}
+
+.journey-timeline {
+  max-width: 850px;
+  margin: auto;
+  position: relative;
+}
+
+.journey-timeline::before {
+  content: "";
+  position: absolute;
+  left: 44px;
+  top: 0;
+  width: 3px;
+  height: 100%;
+  background: #d4af37;
+}
+
+.journey-item {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 35px;
+  position: relative;
+}
+
+.journey-item:last-child {
+  margin-bottom: 0;
+}
+
+.journey-year {
+  width: 90px;
+  height: 90px;
+  background: #065f46;
+  color: white;
+  border-radius: 50%;
+  font-weight: 700;
+  font-size: 17px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  z-index: 2;
+}
+
+.journey-content {
+  background: white;
+  padding: 25px;
+  border-radius: 20px;
+  flex: 1;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.05);
+}
+
+.journey-content h3 {
+  color: #065f46;
+  margin-bottom: 10px;
+  font-size: 21px;
+}
+
+.journey-content p {
+  color: #64748b;
+  line-height: 1.8;
+}
+
+/* PROPERTY ASSISTANCE */
+
+.why-invest {
+  padding: 100px 0;
+  background: white;
+}
+
+.invest-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 60px;
+  align-items: center;
+}
+
+.invest-image img {
+  display: block;
+  width: 100%;
+  border-radius: 28px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+}
+
+.invest-content h2 {
+  font-size: 46px;
+  line-height: 1.15;
+  color: #065f46;
+  margin: 20px 0;
+  font-family: "Cormorant Garamond", Georgia, serif;
+}
+
+.invest-content > p {
+  color: #64748b;
+  line-height: 1.8;
+  margin-bottom: 25px;
+}
+
+.invest-content ul {
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.invest-content li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  color: #065f46;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+.invest-content li svg {
+  color: #16a34a;
+  font-size: 17px;
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+/* DOCUMENTATION AND PROFESSIONAL CREDENTIALS */
+
+.documentation-section {
+  padding: 100px 0;
+  background: linear-gradient(135deg, #f8faf6, #ffffff);
+  overflow: hidden;
+}
+
+.documentation-grid {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 55px;
+  align-items: center;
+}
+
+.documentation-content h2 {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 48px;
+  line-height: 1.12;
+  color: #064e3b;
+  margin: 18px 0;
+}
+
+.documentation-intro {
+  color: #64748b;
+  font-size: 15px;
+  line-height: 1.85;
+  margin-bottom: 30px;
+}
+
+.documentation-point {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 25px;
+}
+
+.documentation-icon {
+  width: 52px;
+  height: 52px;
+  min-width: 52px;
+  border-radius: 50%;
+  background: #e7efe7;
+  color: #065f46;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 21px;
+}
+
+.documentation-icon.gold-icon {
+  background: #f8efcf;
+  color: #a78316;
+}
+
+.documentation-point h3 {
+  color: #064e3b;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 22px;
+  line-height: 1.25;
+  margin: 2px 0 7px;
+}
+
+.documentation-point p {
+  color: #64748b;
+  font-size: 14px;
+  line-height: 1.75;
+  margin: 0;
+}
+
+/* CERTIFICATE DISPLAY */
+
+.certificate-showcase {
+  padding: 16px;
+  background: linear-gradient(145deg, #fffdf5, #ead8a4, #fff9e7);
+  border: 1px solid #d4af37;
+  border-radius: 20px;
+  box-shadow: 0 25px 55px rgba(6, 78, 59, 0.12);
+}
+
+.certificate-frame {
+  background: white;
+  padding: 9px;
+  border-radius: 10px;
+}
+
+.certificate-frame > img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 5px;
+}
+
+.certificate-caption {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 17px 7px 7px;
+  color: #a78316;
+}
+
+.certificate-caption > svg {
+  font-size: 27px;
+  flex-shrink: 0;
+}
+
+.certificate-caption h3 {
+  color: #064e3b;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 20px;
+  margin: 0 0 4px;
+}
+
+.certificate-caption p {
+  color: #64748b;
+  font-size: 12px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* DOCUMENTATION TYPES */
+
+.documentation-records {
+  margin-top: 70px;
+  padding: 38px 25px 25px;
+  border-radius: 24px;
+  background: #edf2e9;
+}
+
+.records-heading {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.records-heading > span {
+  color: #a78316;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.records-heading h3 {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  color: #064e3b;
+  font-size: 34px;
+  line-height: 1.2;
+  margin: 12px 0;
+}
+
+.records-heading p {
+  max-width: 650px;
+  margin: 0 auto;
+  color: #64748b;
+  line-height: 1.7;
+  font-size: 14px;
+}
+
+.records-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.record-item {
+  text-align: center;
+  padding: 20px 12px;
+  border-right: 1px solid #d4ddd0;
+}
+
+.record-item:last-child {
+  border-right: none;
+}
+
+.record-item > svg {
+  font-size: 29px;
+  color: #a78316;
+  margin-bottom: 13px;
+}
+
+.record-item h4 {
+  color: #064e3b;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 20px;
+  margin: 0 0 8px;
+}
+
+.record-item p {
+  color: #64748b;
+  font-size: 13px;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.documentation-note {
+  text-align: center;
+  color: #64748b;
+  font-size: 12px;
+  line-height: 1.7;
+  margin: 22px auto 0;
+  max-width: 800px;
+}
+
+/* TABLET */
+
+@media (max-width: 1024px) {
+  .story-grid,
+  .invest-grid,
+  .mission-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .documentation-grid {
+    grid-template-columns: 1fr;
+    gap: 38px;
+  }
+
+  .certificate-showcase {
+    max-width: 700px;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0 auto;
+  }
+
+  .values-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .records-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .record-item:nth-child(2) {
+    border-right: none;
+  }
+
+  .record-item:nth-child(-n + 2) {
+    border-bottom: 1px solid #d4ddd0;
+  }
+
+  .story-content h2,
+  .invest-content h2,
+  .documentation-content h2 {
+    font-size: 40px;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+  .about-hero {
+    min-height: 75vh;
+  }
+
+  .about-hero-content {
+    text-align: center;
+  }
+
+  .about-hero-content h1 {
+    font-size: 42px;
+  }
+
+  .about-hero-content p {
+    font-size: 16px;
+  }
+
+  .about-story,
+  .mission-section,
+  .values-section,
+  .journey-section,
+  .why-invest,
+  .documentation-section {
+    padding: 65px 0;
+  }
+
+  .story-stats {
+    gap: 12px;
+  }
+
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-heading h2,
+  .story-content h2,
+  .invest-content h2 {
+    font-size: 34px;
+  }
+
+  .documentation-content h2 {
+    font-size: 36px;
+  }
+
+  .journey-timeline::before {
+    left: 25px;
+  }
+
+  .journey-item {
+    gap: 15px;
+  }
+
+  .journey-year {
+    width: 54px;
+    height: 54px;
+    font-size: 13px;
+  }
+
+  .journey-content {
+    padding: 20px;
+  }
+
+  .mission-card {
+    padding: 32px 24px;
+  }
+
+  .documentation-records {
+    margin-top: 45px;
+    padding: 28px 12px 20px;
+  }
+
+  .records-heading h3 {
+    font-size: 28px;
+  }
+
+  .record-item {
+    padding: 18px 8px;
+  }
+
+  .record-item h4 {
+    font-size: 19px;
+  }
+}
+
+/* SMALL MOBILE */
+
+@media (max-width: 480px) {
+  .about-hero-content h1 {
+    font-size: 34px;
+  }
+
+  .about-btn {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .story-content h2,
+  .invest-content h2,
+  .documentation-content h2 {
+    font-size: 30px;
+  }
+
+  .story-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .documentation-point {
+    gap: 12px;
+  }
+
+  .documentation-icon {
+    width: 43px;
+    height: 43px;
+    min-width: 43px;
+    font-size: 17px;
+  }
+
+  .documentation-point h3 {
+    font-size: 20px;
+  }
+
+  .records-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .record-item,
+  .record-item:nth-child(-n + 2) {
+    border-right: none;
+    border-bottom: 1px solid #d4ddd0;
+  }
+
+  .record-item:last-child {
+    border-bottom: none;
+  }
+
+  .certificate-showcase {
+    padding: 9px;
+  }
+}
+
+/* ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+  .about-btn,
+  .mission-card,
+  .value-card {
+    transition: none;
+  }
+}
