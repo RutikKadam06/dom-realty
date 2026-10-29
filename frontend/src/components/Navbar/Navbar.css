@@ -1,21 +1,24 @@
 
+/* ==========================================
+   DOM REALTY NAVBAR
+========================================== */
+
 .navbar {
   position: relative;
-  display: block;
+  z-index: 1300;
   width: 100%;
-  min-height: 88px;
-  z-index: 1000;
-  background: #0b352a;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
-  box-sizing: border-box;
+  background: #064b3c;
+  color: #fff;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.12);
+  font-family: "Poppins", sans-serif;
 }
 
 .navbar-container {
   width: 100%;
   max-width: 1440px;
-  min-height: 88px;
+  min-height: 94px;
   margin: 0 auto;
-  padding: 14px 5%;
+  padding: 16px 5%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -23,156 +26,296 @@
   box-sizing: border-box;
 }
 
+/* Logo */
+
 .navbar-logo {
   display: flex;
   flex-direction: column;
   flex-shrink: 0;
+  gap: 5px;
   color: #fff;
   text-decoration: none;
 }
 
 .logo-text {
   color: #fff;
-  font-size: 25px;
+  font-size: 30px;
+  line-height: 1.15;
   font-weight: 800;
-  letter-spacing: 2px;
-  line-height: 1.3;
+  letter-spacing: 1.5px;
 }
 
 .logo-tagline {
-  margin-top: 5px;
-  color: #e3c44e;
-  font-size: 11px;
+  color: #d4af37;
+  font-size: 14px;
+  line-height: 1.4;
+  font-weight: 500;
 }
+
+/* Desktop links */
 
 .navbar-menu {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: clamp(10px, 1.3vw, 20px);
+  gap: 20px;
 }
 
 .nav-link {
-  color: #fff;
-  text-decoration: none;
+  position: relative;
+  padding: 8px 0;
+  color: #f5f7f6;
   font-size: 14px;
   font-weight: 500;
+  text-decoration: none;
   white-space: nowrap;
   transition: color 0.2s ease;
 }
 
 .nav-link:hover,
 .nav-link.active {
-  color: #f2cc3d;
+  color: #e2c044;
 }
 
-.navbar-whatsapp,
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: #d4af37;
+  transition: width 0.2s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+/* WhatsApp enquiry button */
+
+.navbar-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 11px 15px;
+  border: 1px solid #d4af37;
+  border-radius: 30px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 0.2s ease;
+}
+
+.navbar-whatsapp svg {
+  color: #35d477;
+  font-size: 19px;
+}
+
+.navbar-whatsapp:hover {
+  background: #d4af37;
+  color: #064b3c;
+}
+
+/* Desktop Call Us */
+
 .navbar-call-btn {
   display: inline-flex;
   flex-shrink: 0;
   align-items: center;
   justify-content: center;
-  gap: 8px;
-  padding: 13px 17px;
-  border-radius: 30px;
-  text-decoration: none;
-  font-size: 13px;
-  font-weight: 700;
-  white-space: nowrap;
-  transition: all 0.2s ease;
-}
-
-.navbar-whatsapp {
-  background: #e0c044;
-  color: #10382c;
-}
-
-.navbar-whatsapp:hover {
-  background: #f4d75b;
-}
-
-.navbar-call-btn {
-  border: 1px solid rgba(255, 255, 255, 0.45);
+  gap: 10px;
+  padding: 13px 18px;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  border-radius: 35px;
   color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
 }
 
 .navbar-call-btn svg {
-  color: #e0c044;
+  color: #e2c044;
 }
 
 .navbar-call-btn:hover {
-  border-color: #e0c044;
-  color: #e0c044;
+  background: rgba(255, 255, 255, 0.1);
+  border-color: #d4af37;
 }
 
+/* Admin login */
+
 .admin-login-link {
-  color: #fff;
+  color: #e2c044;
   font-size: 13px;
   text-decoration: none;
   white-space: nowrap;
 }
 
-.admin-login-link:hover {
-  color: #e0c044;
+/* Mobile-only elements hidden on desktop */
+
+.mobile-menu-btn,
+.mobile-call-link,
+.navbar-menu-overlay {
+  display: none;
 }
 
-.mobile-menu-btn {
-  display: none;
-  padding: 8px;
-  border: 0;
-  background: transparent;
+/* ==========================================
+   FLOATING WHATSAPP AND CALL BUTTONS
+========================================== */
+
+.floating-contact-buttons {
+  position: fixed;
+  right: 20px;
+  bottom: 24px;
+  z-index: 1200;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.floating-contact-buttons a {
+  width: 54px;
+  height: 54px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
   color: #fff;
   font-size: 23px;
-  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 0 5px 16px rgba(0, 0, 0, 0.24);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-/* Laptop screens */
-@media (max-width: 1150px) {
+.floating-contact-buttons a:hover {
+  transform: scale(1.08);
+  box-shadow: 0 7px 20px rgba(0, 0, 0, 0.3);
+}
+
+.floating-contact-buttons .floating-whatsapp {
+  background: #16a34a;
+}
+
+.floating-contact-buttons .floating-call {
+  background: #006653;
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 1100px) and (min-width: 769px) {
   .navbar-container {
-    gap: 14px;
     padding-left: 3%;
     padding-right: 3%;
+    gap: 14px;
+  }
+
+  .logo-text {
+    font-size: 25px;
+  }
+
+  .logo-tagline {
+    font-size: 12px;
   }
 
   .navbar-menu {
-    gap: 11px;
+    gap: 12px;
   }
 
   .nav-link {
     font-size: 12px;
   }
 
-  .logo-text {
-    font-size: 21px;
+  .navbar-whatsapp {
+    padding: 10px 12px;
+    font-size: 12px;
   }
 
-  .navbar-whatsapp,
   .navbar-call-btn {
-    padding: 11px 12px;
+    padding: 11px 13px;
     font-size: 12px;
   }
 }
 
-/* Tablets and mobile */
-@media (max-width: 900px) {
-  .navbar,
-  .navbar-container {
-    min-height: 76px;
+/* ==========================================
+   MOBILE NAVIGATION
+========================================== */
+
+@media (max-width: 768px) {
+  .navbar {
+    z-index: 1300;
   }
 
   .navbar-container {
-    padding: 12px 5%;
+    position: relative;
+    min-height: 88px;
+    padding: 14px 18px;
     gap: 12px;
   }
 
-  .mobile-menu-btn {
-    display: block;
-    margin-left: auto;
+  .navbar-logo {
+    min-width: 0;
+    gap: 5px;
   }
 
-  .navbar-call-btn {
-    padding: 10px 12px;
+  .logo-text {
+    font-size: clamp(21px, 5.5vw, 28px);
+    letter-spacing: 1px;
   }
+
+  .logo-tagline {
+    font-size: clamp(11px, 3vw, 14px);
+  }
+
+  /* Hamburger */
+
+  .mobile-menu-btn {
+    position: relative;
+    z-index: 1303;
+    flex-shrink: 0;
+    width: 46px;
+    height: 46px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 10px;
+    background: transparent;
+    color: #fff;
+    font-size: 26px;
+    cursor: pointer;
+  }
+
+  /* Hide desktop Call Us */
+
+  .navbar-call-btn {
+    display: none !important;
+  }
+
+  /* Overlay */
+
+  .navbar-menu-overlay {
+    display: block;
+    position: fixed;
+    inset: 0;
+    z-index: 1301;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    border: none;
+    background: rgba(0, 0, 0, 0.48);
+  }
+
+  /* Mobile menu */
 
   .navbar-menu {
     display: none;
@@ -180,49 +323,142 @@
     top: 100%;
     left: 0;
     right: 0;
-    z-index: 1001;
-    padding: 20px 5%;
+    z-index: 1302;
+    width: 100%;
+    max-height: calc(100vh - 100px);
+    max-height: calc(100dvh - 100px);
+    overflow-y: auto;
+    box-sizing: border-box;
+    padding: 18px;
     flex-direction: column;
     align-items: stretch;
-    gap: 18px;
-    background: #0b352a;
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+    justify-content: flex-start;
+    gap: 5px;
+    background: #064b3c;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 0 0 16px 16px;
+    box-shadow: 0 14px 25px rgba(0, 0, 0, 0.24);
   }
 
   .navbar-menu.active {
     display: flex;
   }
 
-  .nav-link {
-    padding: 5px 0;
+  .navbar-menu .nav-link {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 13px 12px;
+    border-radius: 8px;
+    color: #fff;
     font-size: 15px;
+    white-space: normal;
   }
 
-  .navbar-whatsapp {
-    align-self: flex-start;
+  .navbar-menu .nav-link::after {
+    display: none;
   }
 
-  .admin-login-link {
-    padding: 5px 0;
+  .navbar-menu .nav-link:hover,
+  .navbar-menu .nav-link.active {
+    background: rgba(255, 255, 255, 0.09);
+    color: #e2c044;
+  }
+
+  /* Enquire and Call Us inside menu */
+
+  .navbar-menu .navbar-whatsapp,
+  .navbar-menu .mobile-call-link {
+    width: 100%;
+    min-height: 46px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 7px;
+    padding: 12px 16px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  .navbar-menu .navbar-whatsapp {
+    background: #0b604b;
+    border: 1px solid #25866c;
+    color: #fff;
+  }
+
+  .navbar-menu .navbar-whatsapp svg {
+    color: #55e58a;
+  }
+
+  .navbar-menu .mobile-call-link {
+    background: #d4af37;
+    color: #064b3c;
+  }
+
+  .navbar-menu .mobile-call-link svg {
+    color: #064b3c;
+  }
+
+  .navbar-menu .admin-login-link {
+    display: block;
+    margin-top: 8px;
+    padding: 13px 12px;
+    border-top: 1px solid rgba(255, 255, 255, 0.14);
+    color: #e2c044;
     font-size: 14px;
+  }
+
+  /* Floating buttons */
+
+  .floating-contact-buttons {
+    right: 12px;
+    bottom: 18px;
+    gap: 10px;
+  }
+
+  .floating-contact-buttons a {
+    width: 48px;
+    height: 48px;
+    font-size: 20px;
   }
 }
 
-@media (max-width: 480px) {
+/* ==========================================
+   SMALL MOBILE
+========================================== */
+
+@media (max-width: 380px) {
+  .navbar-container {
+    padding: 12px;
+  }
+
   .logo-text {
-    font-size: 19px;
-    letter-spacing: 1.5px;
+    font-size: 20px;
   }
 
   .logo-tagline {
     font-size: 10px;
   }
 
-  .navbar-call-btn {
-    padding: 10px;
+  .mobile-menu-btn {
+    width: 42px;
+    height: 42px;
+    font-size: 24px;
   }
 
-  .navbar-call-btn span {
-    font-size: 12px;
+  .floating-contact-buttons {
+    right: 10px;
+    bottom: 14px;
+    gap: 9px;
+  }
+
+  .floating-contact-buttons a {
+    width: 45px;
+    height: 45px;
+    font-size: 19px;
   }
 }
